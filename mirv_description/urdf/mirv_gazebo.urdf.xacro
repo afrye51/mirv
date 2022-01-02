@@ -32,9 +32,9 @@
        <!-- ====================================================
           Include other sensors and functions for vehicle components
      ========================================================= -->
-  <xacro:include filename="$(find road_robot_description)/urdf/all_sensors.urdf.xacro" />
-  <xacro:include filename="$(find road_robot_description)/urdf/dd_controller.urdf.xacro" />
-  <xacro:include filename="$(find road_robot_description)/urdf/wheel.urdf.xacro" />
+  <xacro:include filename="$(find mirv_description)/urdf/all_sensors.urdf.xacro" />
+  <xacro:include filename="$(find mirv_description)/urdf/dd_controller.urdf.xacro" />
+  <xacro:include filename="$(find mirv_description)/urdf/wheel.urdf.xacro" />
 
      <!-- ====================================================
           Define vehicle properties
@@ -52,7 +52,7 @@
   <xacro:property name="body_length" value="0.3" />
 
   <xacro:arg name="pub_tf" default="true" />
-  <xacro:arg name="robot_name" default="road_robot" />
+  <xacro:arg name="robot_name" default="mirv" />
 
   <xacro:property name="robot_name_prop" value="$(arg robot_name)" />
 
@@ -134,7 +134,7 @@
   </gazebo>
 
   <!-- Vehicle controller -->
-  <xacro:dd_controller name="road_robot_controller" wheelbase="${2*half_wheelbase}" wheel_diameter="${2*wheel_radius}" left_joint="wheel_fl_joint" right_joint="wheel_fr_joint" />
+  <xacro:dd_controller name="mirv_controller" wheelbase="${2*half_wheelbase}" wheel_diameter="${2*wheel_radius}" left_joint="wheel_fl_joint" right_joint="wheel_fr_joint" />
 
   <!-- LiDAR Hokuyo ust10lx -->
   <xacro:sensor_hokuyo_ust10lx name="lidar" parent="base_link" color="black" visualize="true">

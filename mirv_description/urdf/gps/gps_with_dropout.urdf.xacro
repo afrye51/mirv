@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="sensor_gps_with_dropout" xmlns:xacro="http://ros.org/wiki/xacro">
 
-	<xacro:include filename="$(find road_robot_description)/urdf/includes/materials.urdf.xacro"/>
+	<xacro:include filename="$(find mirv_description)/urdf/includes/materials.urdf.xacro"/>
 
 	<!-- ====================================================
 						Helpers
@@ -56,14 +56,14 @@
 			<visual>
 				<origin rpy="0 0 0" xyz="0 0 0"/>
 				<geometry>
-					<mesh filename="package://road_robot_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
+					<mesh filename="package://mirv_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
 				</geometry>
 				<xacro:color_material color="${color}"/>
 			</visual>
 			<collision>
 				<origin rpy="0 0 0" xyz="0 0 0"/>
 				<geometry>
-					<mesh filename="package://road_robot_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
+					<mesh filename="package://mirv_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
 				</geometry>
 			</collision>
 		</link>
@@ -76,8 +76,8 @@
 
 		<gazebo>
 			<plugin name="${name}_controller" filename="libgazebo_ros_gps_with_dropout.so">
-				<xacro:include filename="$(find road_robot_description)/config/gps/custom_gps_behavior.geofence"/>
-				<xacro:include filename="$(find road_robot_description)/config/gps/plots.xacro"/>
+				<xacro:include filename="$(find mirv_description)/config/gps/custom_gps_behavior.geofence"/>
+				<xacro:include filename="$(find mirv_description)/config/gps/plots.xacro"/>
 				<alwaysOn>1</alwaysOn>
 				<updateRate>${update_rate}</updateRate>
 				<bodyName>${name}_link</bodyName>
@@ -96,6 +96,6 @@
 		</gazebo>
 	</xacro:macro>
 
-	<!--<xacro:include filename="$(find road_robot_description)/config/gps/dropouts.xml"/>-->
+	<!--<xacro:include filename="$(find mirv_description)/config/gps/dropouts.xml"/>-->
 
 </robot>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="sensor_standard_imu" xmlns:xacro="http://ros.org/wiki/xacro">
 
-     <xacro:include filename="$(find road_robot_description)/urdf/includes/materials.urdf.xacro"/>
+     <xacro:include filename="$(find mirv_description)/urdf/includes/materials.urdf.xacro"/>
 
      <xacro:macro name="sensor_standard_imu" params="name parent *origin color">
 

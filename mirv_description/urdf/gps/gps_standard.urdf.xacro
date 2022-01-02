@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="sensor_standard_gps" xmlns:xacro="http://ros.org/wiki/xacro">
 
-	<xacro:include filename="$(find road_robot_description)/urdf/includes/materials.urdf.xacro"/>
+	<xacro:include filename="$(find mirv_description)/urdf/includes/materials.urdf.xacro"/>
 
   	<xacro:macro name="sensor_standard_gps" params="name parent *origin color ref_lat ref_long ref_head drift vel_drift noise vel_noise update_rate">
 
@@ -21,14 +21,14 @@
 			<visual>
 				<origin rpy="0 0 0" xyz="0 0 0"/>
 				<geometry>
-					<mesh filename="package://road_robot_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
+					<mesh filename="package://mirv_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
 				</geometry>
 				<xacro:color_material color="${color}"/>
 			</visual>
 			<collision>
 				<origin rpy="0 0 0" xyz="0 0 0"/>
 				<geometry>
-					<mesh filename="package://road_robot_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
+					<mesh filename="package://mirv_description/meshes/gps/antenna_3GO16.stl" scale="1.0 1.0 1.0"/>
 				</geometry>
 			</collision>
 		</link>

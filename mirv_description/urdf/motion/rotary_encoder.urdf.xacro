@@ -14,7 +14,7 @@
 			<visual>
 				<origin xyz="0 0 0" rpy="0 0 0"/>
 				<geometry>
-					<mesh filename="package://road_robot_description/meshes/motion/rotary_encoder.dae"/>
+					<mesh filename="package://mirv_description/meshes/motion/rotary_encoder.dae"/>
 				</geometry>
 			</visual>
 

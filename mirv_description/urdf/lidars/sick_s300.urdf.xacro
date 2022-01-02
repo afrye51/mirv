@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="sensor_sick_s300" xmlns:xacro="http://ros.org/wiki/xacro">
 
-     <xacro:include filename="$(find road_robot_description)/urdf/includes/materials.urdf.xacro"/>
+     <xacro:include filename="$(find mirv_description)/urdf/includes/materials.urdf.xacro"/>
 
      <xacro:macro name="sensor_sick_s300" params="name visualize:=false parent *origin color">
 
@@ -15,14 +15,14 @@
                <collision>
                     <origin xyz="0 0 0.076" rpy="0 0 0"/>
                     <geometry>
-                         <mesh filename="package://road_robot_description/meshes/lidars/sick/sick_s300.dae"/>
+                         <mesh filename="package://mirv_description/meshes/lidars/sick/sick_s300.dae"/>
                     </geometry>
                </collision>
 
                <visual>
                     <origin xyz="0 0 0" rpy="0 0 0"/>
                     <geometry>
-                         <mesh filename="package://road_robot_description/meshes/lidars/sick/sick_s300.dae"/>
+                         <mesh filename="package://mirv_description/meshes/lidars/sick/sick_s300.dae"/>
                     </geometry>
                     <xacro:color_material color="${color}"/>
                </visual>

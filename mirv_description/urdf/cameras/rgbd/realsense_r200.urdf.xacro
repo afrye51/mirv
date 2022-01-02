@@ -7,7 +7,7 @@
                <visual>
                     <origin rpy="0 0 0" xyz="0 0 0"/>
                     <geometry>
-                         <mesh filename="package://road_robot_description/meshes/cameras/intel/realsense_r200.dae"/>
+                         <mesh filename="package://mirv_description/meshes/cameras/intel/realsense_r200.dae"/>
                     </geometry>
                </visual>
                <collision>

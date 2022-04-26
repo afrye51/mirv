@@ -1,17 +1,28 @@
-# Summary
+# MIRV
+
+## Summary
 ROS files for the MIRV project
 
-# Installation
-This code is written for ROS 1 Noetic running on Ubuntu 20.04. 
+## Quick notes
+Similar projects to gain insight from: 
+- [ClearPath Jackal](https://github.com/jackal/jackal)
+- [ROBOTIS Turtlebot3](https://github.com/ROBOTIS-GIT/turtlebot3) and [simulations](https://github.com/ROBOTIS-GIT/turtlebot3_simulations)
 
-Clone this repository into an existing ros workspace, or create a new one. 
-Also clone the dependencies: gazebo_ros_pkgs hector_gazebo: 
+## Installation
+Check out the instructions [here](installation_instructions.md)
 
-```
-git clone https://github.com/afrye51/mirv
-git clone https://github.com/ros-simulation/gazebo_ros_pkgs
-git clone https://github.com/tu-darmstadt-ros-pkg/hector_gazebo
-```
-# Usage
+## Usage
 Currently the only launch file is road_slight_curve.launch in mirv_simulation, which launches the vehicle with sensors on a road in gazebo. 
 
+## Folder Structure
+recommended folder structure:
+- mirv (metapackage)
+  - mirv_control (real world/simulation-agnostic nodes)
+  - mirv_real (real-world sensor drivers/calibration)
+  - mirv_description (simulation meshes/sensor plugins/robot description,  just robot specifics. If someone else wanted to use the robot for a different task, they would want these files)
+  - mirv_simulation (simulation launch files/worlds)
+
+optional other packages:
+  - mirv_msgs (any custom messages that we define)
+  - mirv_tutorials (tutorials for using the rover/simulator)
+  - mirv_documentation

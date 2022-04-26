@@ -18,7 +18,7 @@
   </include>
 
   <!-- Start RViz for visualization -->
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find mirv_simulation)/rviz/mirv_sensors.rviz" />
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find mirv_description)/rviz/mirv_sensors.rviz" />
 
   <param name="robot_description" command="$(find xacro)/xacro $(find mirv_description)/urdf/mirv_gazebo.urdf.xacro" />
 

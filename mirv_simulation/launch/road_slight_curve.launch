@@ -14,6 +14,6 @@
   <include file="$(find mirv_simulation)/launch/spawn_mirv.launch" pass_all_args="true"/>
 
   <!-- Joystick teleop -->
-  <include file="$(find mirv_simulation)/launch/mirv_teleop.launch" />
+  <include file="$(find mirv_simulation)/launch/teleop_joy.launch" />
 
 </launch>
